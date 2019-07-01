@@ -28,9 +28,11 @@
             <ul class="dropdown-menu" id="listExamples" role="menu" aria-labelledby="menu1"></ul>
         </div>
 
-        <a class="btn" href="#" onclick='run()'>&#9658; Run</a>
-        <a class="btn" href="#" onclick='reset()'>&#8634; Reset</a>
-
+        <a class="btn" onclick='run()'>&#9658; Run</a>
+        <a class="btn" onclick='reset()'>&#8634; Reset</a>
+        <a class="btn" onclick='editor.session.unfold()'>UnFold All ></a>
+        <a class="btn" onclick='editor.session.foldAll()'>Fold All v</a>
+        
         <pre id="editor">//file not found</pre>
     </div>
 
@@ -42,7 +44,8 @@
             ["Basic Create", "basic_create.js"],
             ["Basic Color", "basic_color.js"],
             ["Basic Rotate", "basic_rotate.js"],
-            ["Basic Corner Radius", "basic_corner.js"]
+            ["Basic Corner Radius", "basic_corner.js"],
+            ["Advanced Test", "advance.js"]
         ];
 
         var ul = document.getElementById("listExamples");

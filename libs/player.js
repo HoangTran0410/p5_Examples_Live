@@ -70,12 +70,12 @@ function startMain() {
     editor.setTheme('ace/theme/xcode');
     editor.getSession().setMode('ace/mode/javascript');
     editor.getSession().setUseWrapMode(true);
-    //editor.setHighlightActiveLine(false);
     editor.renderer.setShowPrintMargin(false);
+    //editor.setHighlightActiveLine(false);
     //editor.renderer.setShowGutter(false);
     //editor.gotoLine(0);
-    editor.setAutoScrollEditorIntoView(true);
-    editor.setOption('maxLines', 150);
+    // editor.setAutoScrollEditorIntoView(true);
+    // editor.setOption('maxLines', 150);
 
     activeSketch = new p5('', myP5);
 }
