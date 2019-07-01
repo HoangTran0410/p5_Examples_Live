@@ -8,7 +8,7 @@ function preload() {
 function setup() {
     createCanvas(800, 400);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
     
     let button = new AwsomeRect({
         picture: pic,
@@ -17,7 +17,8 @@ function setup() {
         x: 400,
         y: 200,
         width: 150,
-        height: 50
+        height: 50,
+        draggable: false
     });
 
     button.onHover = function() {
@@ -34,14 +35,7 @@ function setup() {
 
     button.onRelease = function() {
         this.y -= 5;
-
-        if(bgColor == "white") {
-            bgColor = "black";
-            this.strokeColor = "white";
-        } else {
-            bgColor = "white";
-            this.strokeColor = "black";
-        }
+        changeBg();
     }
 }
 
@@ -49,7 +43,15 @@ function draw() {
     background(bgColor);
 
     fill(0);
-    text("Drag the shapes", width / 2, 20);
+    text("Click the button", width / 2, 20);
 
     AwsomeShape.runShapes();
+}
+
+function changeBg() {
+    if(bgColor == "white") {
+        bgColor = "gray";
+    } else {
+        bgColor = "white";
+    }
 }

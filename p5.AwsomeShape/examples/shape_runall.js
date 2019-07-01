@@ -22,6 +22,7 @@ function draw() {
     fill(0);
     text("Drag the shapes", width / 2, 20);
 
-    // then call this, and all shapes you have created will be run
+    // ============ CODE OF AUTORUN HERE ============
+    // Then call this, and all shapes you have created will be run
     AwsomeShape.runShapes();
 }

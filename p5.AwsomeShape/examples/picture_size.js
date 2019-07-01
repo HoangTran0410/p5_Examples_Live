@@ -28,7 +28,7 @@ function setup() {
         this.strokeWeight = 2;
     }
     shape.onOut = function() {
-        this.strokeWeight = 0;
+        this.strokeWeight = 1;
     }
 }
 
