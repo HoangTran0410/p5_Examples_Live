@@ -1,5 +1,4 @@
 let shape;
-let shape2;
 
 function setup() {
     createCanvas(800, 400);
@@ -7,18 +6,17 @@ function setup() {
     AwsomeShape.init();
     
     shape = new AwsomeRect({
+        text: "Awsome",
+        textSize: 30,
+        textFill: "orange",
+        textStroke: "black",
+        textStrokeWeight: 2,
+
         x: 200,
         y: 200,
-        fillColor: "#ff0" // hex color
+        width: 150,
+        height: 75
     });
-
-    shape2 = new AwsomeRect({
-        x: 500,
-        y: 200,
-        fillColor: "orange", // or name of color that p5.js provide
-        strokeColor: "green",
-        strokeWeight: 5 // borders's width of the shape
-    })
 }
 
 function draw() {
@@ -28,6 +26,5 @@ function draw() {
     text("Drag the shapes", width / 2, 20);
 
     // shape.run();
-    // shape2.run();
     AwsomeShape.runShapes();
 }

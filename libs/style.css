@@ -1,8 +1,9 @@
 /*light blue #B3D4FC;*/
 
 body {
-  margin: 0 auto 50px auto;
+  margin: 10px auto 50px auto;
   padding: 0px;
+  background-color: #fdfdfd;
 }
 
 #defaultCanvas {
