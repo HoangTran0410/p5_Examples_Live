@@ -10,9 +10,11 @@ function setup() {
     AwsomeShape.init();
     
     let shape = new AwsomeRect({
+        
         picture: pic,
+        
         strokeWeight: 0, // no strokeWeight -> no Border
-        cornerRadius: 20,
+        cornerRadius: 5, 
 
         x: 400,
         y: 200,
