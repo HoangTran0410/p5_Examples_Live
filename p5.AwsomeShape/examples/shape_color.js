@@ -4,7 +4,7 @@ let shape2;
 function setup() {
     createCanvas(800, 400);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
     
     shape = new AwsomeRect({
         x: 200,

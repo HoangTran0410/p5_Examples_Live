@@ -1,7 +1,7 @@
 function setup() {
     createCanvas(800, 400);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
     
     // just create shapes with variable
     let shape = new AwsomeRect({

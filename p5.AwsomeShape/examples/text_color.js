@@ -1,7 +1,7 @@
 function setup() {
     createCanvas(800, 400);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
 
     new AwsomeRect({
         text: "Nice",

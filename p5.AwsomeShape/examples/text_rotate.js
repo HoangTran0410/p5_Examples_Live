@@ -3,7 +3,7 @@ let shape, shape2, shape3;
 function setup() {
     createCanvas(800, 400);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
     
     shape = new AwsomeRect({
         text: "Awsome",

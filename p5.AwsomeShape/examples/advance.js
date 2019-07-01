@@ -9,7 +9,7 @@ function preload() {
 function setup() {
     createCanvas(800, 600);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
 
     // == Add examples box to shapes list ==
     addFillStrokeshapes();

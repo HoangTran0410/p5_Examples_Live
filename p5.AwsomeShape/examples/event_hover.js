@@ -1,7 +1,7 @@
 function setup() {
     createCanvas(800, 400);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
     
     let shape = new AwsomeRect({
         text: "Hover me",

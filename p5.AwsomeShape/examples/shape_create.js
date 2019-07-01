@@ -4,19 +4,20 @@ let bigShape;
 function setup() {
     createCanvas(800, 400);
 
-    // call init() to setting AwsomeShape
-    AwsomeShape.init();
+    AwsomeShape.init(this);
     
-    // create shapes
+    // create rectangle shapes
     shape = new AwsomeRect({
         x: 200,
         y: 200
     });
 
-    bigShape = new AwsomeRect({
+    // Another way, this way much have 'shape' attribute
+    bigShape = AwsomeShape.create({
+        shape: "rectangle",
         x: 500,
         y: 200,
-        width: 200,
+        width: 200, // width and height of rectangle
         height: 250
     });
 }

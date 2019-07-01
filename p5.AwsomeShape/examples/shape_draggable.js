@@ -4,7 +4,7 @@ let bigShape;
 function setup() {
     createCanvas(800, 400);
 
-    AwsomeShape.init();
+    AwsomeShape.init(this);
     
     shape = new AwsomeRect({
         text: "You can't drag me!!",
