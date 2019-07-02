@@ -1,6 +1,14 @@
 let pic;
 let bgColor = "white";
 
+function changeBg() {
+    if(bgColor == "white") {
+        bgColor = "gray";
+    } else {
+        bgColor = "white";
+    }
+}
+
 function preload() {
     pic = loadImage('examples/assets/subscribe.png');
 }
@@ -10,7 +18,8 @@ function setup() {
 
     AwsomeShape.init(this);
     
-    let button = new AwsomeRect({
+    AwsomeShape.create({
+        shape: "rectangle",
         picture: pic,
         cornerRadius: 5,
         strokeWeight: 0,
@@ -18,25 +27,21 @@ function setup() {
         y: 200,
         width: 150,
         height: 50,
-        draggable: false
+        draggable: false,
+        onHover: function() {
+            this.strokeWeight = 3;
+        },
+        onOut: function() {
+            this.strokeWeight = 0;
+        },
+        onPress: function() {
+            this.y += 5;
+        },
+        onRelease: function() {
+            this.y -= 5;
+            changeBg();
+        }
     });
-
-    button.onHover = function() {
-        this.strokeWeight = 3;
-    }
-
-    button.onOut = function() {
-        this.strokeWeight = 0;
-    }
-
-    button.onPress = function() {
-        this.y += 5;
-    }
-
-    button.onRelease = function() {
-        this.y -= 5;
-        changeBg();
-    }
 }
 
 function draw() {
@@ -46,12 +51,4 @@ function draw() {
     text("Click the button", width / 2, 20);
 
     AwsomeShape.runShapes();
-}
-
-function changeBg() {
-    if(bgColor == "white") {
-        bgColor = "gray";
-    } else {
-        bgColor = "white";
-    }
 }
