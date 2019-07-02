@@ -3,20 +3,29 @@ function setup() {
 
     AwsomeShape.init(this);
     
+    // create shape
+    let shape = new AwsomeRect({
+        text: "Hover me!!",
+        x: 300,
+        y: 200
+    });
+    shape.onHover = function() {
+        this.fillColor = "blue";
+    }
+    shape.onOut = function() {
+        this.fillColor = "pink";
+    }
+
+    // Another way, put event into config
     new AwsomeRect({
-        text: "Hover me",
-        x: 400,
+        text: "Hover me too",
+        x: 500,
         y: 200,
         onHover: function() {
             this.strokeWeight = 5;
-
-            // https://p5js.org/reference/#/p5/cursor
-            cursor(HAND);
         },
         onOut: function() {
             this.strokeWeight = 1;
-
-            cursor(ARROW);
         }
     });
 }

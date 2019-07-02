@@ -3,21 +3,19 @@ function setup() {
 
     AwsomeShape.init(this);
     
-    let shape = new AwsomeRect({
+    new AwsomeRect({
         text: "Press me",
         x: 400,
-        y: 200
+        y: 200,
+        onPress: function() {
+            this.strokeWeight = 5;
+            this.fillColor = "pink";
+        },
+        onRelease: function() {
+            this.strokeWeight = 1;
+            this.fillColor = "#0000"; // transparent color
+        }
     });
-
-    shape.onPress = function() {
-        this.strokeWeight = 5;
-        this.fillColor = "pink";
-    }
-
-    shape.onRelease = function() {
-        this.strokeWeight = 1;
-        this.fillColor = "#0000"; // transparent color
-    }
 }
 
 function draw() {

@@ -2,16 +2,15 @@ function setup() {
     createCanvas(800, 400);
 
     AwsomeShape.init(this);
-    
-    let shape = new AwsomeRect({
+
+    new AwsomeRect({
         text: "Drag me",
         x: 400,
-        y: 200
+        y: 200,
+        onDrag: function () {
+            this.fillColor = random(["green", "red", "blue", "pink", "yellow"]);
+        }
     });
-
-    shape.onDrag = function() {
-        this.fillColor = random(["green", "red", "blue", "pink", "yellow"]);
-    }
 }
 
 function draw() {
