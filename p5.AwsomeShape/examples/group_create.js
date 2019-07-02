@@ -11,6 +11,9 @@ function setup() {
     AwsomeShape.init(this);
 
     /* 
+        + Group mặc định là 'default'
+        + Bạn có thể cho shape vào group khác (với tên bất kì do bạn đặt) bằng các thêm thuộc tính group khi khởi tạo
+        
         + Những shape trong cùng 1 group không thể được chọn cùng lúc (hover, press, drag ...)
         + 2 shape khác group thì có thể được chọn cùng lúc 
             ~ hãy thử để hình sao và hình tròn đè lên nhau, rồi kéo cả 2 cùng lúc
