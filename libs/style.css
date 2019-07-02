@@ -22,16 +22,15 @@ position:fixed;*/
   margin: auto;
   }
 
-.btn {
+.mybtn {
   float: right;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
   border: 0;
-  
 }
 
-.btn {
+.mybtn {
   background: #225DED;
   background-image: -webkit-linear-gradient(top, #225DED, #225DED);
   background-image: -moz-linear-gradient(top, #225DED, #225DED);
@@ -62,8 +61,6 @@ position:fixed;*/
   background-image: linear-gradient(to bottom, #f08baa, #d15c7f);
   text-decoration: none;
 }
-
-
 
 #editor {
   margin:0;

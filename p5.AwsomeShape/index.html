@@ -17,22 +17,23 @@
 <body>
 
     <div id="container">
+        <h4 id="nameExample">Example: </h4>
         <div id="myP5">
         </div>
 
         <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                Examples
+            <button class="btn btn-success dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                List of Examples
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" id="listExamples" role="menu" aria-labelledby="menu1"></ul>
         </div>
 
-        <a class="btn" onclick='run()'>&#9658; Run</a>
-        <a class="btn" onclick='reset()'>&#8634; Reset</a>
-        <a class="btn" onclick='editor.session.unfold()'>UnFold All ⇩</a>
-        <a class="btn" onclick='editor.session.foldAll()'>Fold All ⇨</a>
-        
+        <a class="mybtn btn" onclick='run()'>&#9658; Run</a>
+        <a class="mybtn btn" onclick='reset()'>&#8634; Reset</a>
+        <a class="mybtn btn" onclick='editor.session.unfold()'>UnFold All ⇩</a>
+        <a class="mybtn btn" onclick='editor.session.foldAll()'>Fold All ⇨</a>
+
         <pre id="editor">//file not found</pre>
     </div>
 

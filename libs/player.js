@@ -118,6 +118,9 @@ function createLi(fileName) {
     ul.innerHTML = '';
 
     for (var file of files) {
+        if(file[1] == fileName) {
+            $("#nameExample").html("Example: " + file[0]);
+        }
         var className = (file[1] == fileName ? "class='active'" : "");
 
         ul.innerHTML += `
