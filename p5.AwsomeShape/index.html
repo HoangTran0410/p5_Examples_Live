@@ -48,7 +48,6 @@
             ["Shape - Rotate", "shape_rotate.js"],
             ["Shape - Corner Radius", "shape_corner.js"],
             ["Shape - Draggable", "shape_draggable.js"],
-            ["Shape - Other Shapes", "shape_others.js"],
             ["Text - Create", "text_create.js"],
             ["Text - Size", "text_size.js"],
             ["Text - Color", "text_color.js"],
@@ -58,20 +57,10 @@
             ["Event - Drag", "event_drag.js"],
             ["Picture - Create", "picture_create.js"],
             ["Picture - Custom Size", "picture_size.js"],
+            ["Other Shapes", "shape_others.js"],
             ["Button - Basic", "button_basic.js"],
             ["Advanced Test", "advance.js"]
         ];
-
-        var ul = document.getElementById("listExamples");
-        for (var file of files) {
-            ul.innerHTML += `
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="index.html?fileName=${file[1]}">
-                    ${file[0]}
-                </a>
-            </li>
-            `;
-        }
 
     </script>
 

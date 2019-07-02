@@ -6,19 +6,19 @@ function setup() {
 
     AwsomeShape.init(this);
     
-    // create rectangle shapes
+    // create rectangle shape with 'AwsomeRect' class
     shape = new AwsomeRect({
         x: 200,
         y: 200
     });
 
-    // Another way, this way much have 'shape' attribute
+    // Another way, use 'AwsomeShape.create' method
     bigShape = AwsomeShape.create({
         shape: "rectangle",
-        x: 500,
-        y: 200,
         width: 200, // width and height of rectangle
-        height: 250
+        height: 250,
+        x: 500,
+        y: 200
     });
 }
 

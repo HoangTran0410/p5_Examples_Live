@@ -71,6 +71,7 @@ function startMain() {
     editor.getSession().setMode('ace/mode/javascript');
     editor.getSession().setUseWrapMode(true);
     editor.renderer.setShowPrintMargin(false);
+    editor.$blockScrolling = Infinity
     //editor.setHighlightActiveLine(false);
     //editor.renderer.setShowGutter(false);
     //editor.gotoLine(0);
@@ -81,16 +82,20 @@ function startMain() {
 }
 
 // =============== Jquery ==================
-var fileName;
 var originalCode;
 var libCode = "";
 
 //load a script
 $(document).ready(function () {
 
-    var searchString = window.location.search.substring(1);
-    var variableArray = searchString.split('&');
-    fileName = getUrlValue("fileName");
+    getFile();
+
+});//doc ready
+
+function getFile(fileName) {
+    fileName = fileName || getUrlValue("fileName");
+
+    createLi(fileName);
 
     if (fileName == undefined) {
         fileName = "examples/" + defaultFile;
@@ -106,8 +111,24 @@ $(document).ready(function () {
         success: loadLibraries,
         error: loadLibrariesDefault
     });
+}
 
-});//doc ready
+function createLi(fileName) {
+    var ul = document.getElementById("listExamples");
+    ul.innerHTML = '';
+
+    for (var file of files) {
+        var className = (file[1] == fileName ? "class='active'" : "");
+
+        ul.innerHTML += `
+        <li role="presentation" ${className}>
+            <a role="menuitem" href="index.html?fileName=${file[1]}">
+                ${file[0]}
+            </a>
+        </li>
+        `;
+    }
+}
 
 function getUrlValue(varSearch) {
     var searchString = window.location.search.substring(1);

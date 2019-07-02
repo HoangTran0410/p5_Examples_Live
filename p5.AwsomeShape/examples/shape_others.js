@@ -1,3 +1,13 @@
+function hightlight() {
+    this.strokeWeight = 3;
+    this.fillColor = "pink";
+}
+
+function unHightlight() {
+    this.strokeWeight = 1;
+    this.fillColor = "#0000";
+}
+
 function setup() {
     createCanvas(800, 400);
 
@@ -12,7 +22,9 @@ function setup() {
         width: 100,
         height: 50,
         x: 75,
-        y: 200
+        y: 100,
+        onHover: hightlight,
+        onOut: unHightlight
     })
 
     /* Circle:
@@ -22,7 +34,9 @@ function setup() {
         shape: "circle",
         radius: 55,
         x: 200,
-        y: 200
+        y: 120,
+        onHover: hightlight,
+        onOut: unHightlight
     })
 
     /* Triangle:
@@ -32,7 +46,9 @@ function setup() {
         shape: "triangle",
         size: 50,
         x: 300,
-        y: 200
+        y: 140,
+        onHover: hightlight,
+        onOut: unHightlight
     })
 
     /* Poly:
@@ -48,7 +64,9 @@ function setup() {
             { x: 0, y: 60 }
         ],
         x: 400,
-        y: 200
+        y: 160,
+        onHover: hightlight,
+        onOut: unHightlight
     })
 
     /* Polygon:
@@ -60,7 +78,9 @@ function setup() {
         nPoint: 7,
         size: 50,
         x: 500,
-        y: 200
+        y: 180,
+        onHover: hightlight,
+        onOut: unHightlight
     })
 
     /* Star:
@@ -70,7 +90,9 @@ function setup() {
         shape: "star",
         size: 50,
         x: 600,
-        y: 200
+        y: 200,
+        onHover: hightlight,
+        onOut: unHightlight
     })
 }
 
