@@ -93,15 +93,11 @@ $(document).ready(function () {
 });//doc ready
 
 function getFile(fileName) {
-    fileName = fileName || getUrlValue("fileName");
+    fileName = fileName || getUrlValue("fileName") || defaultFile;
 
     createLi(fileName);
 
-    if (fileName == undefined) {
-        fileName = "examples/" + defaultFile;
-    } else {
-        fileName = "examples/" + fileName;
-    }
+    fileName = "examples/" + fileName;
 
     $.ajax({
         type: "GET",
@@ -118,7 +114,7 @@ function createLi(fileName) {
     ul.innerHTML = '';
 
     for (var file of files) {
-        if(file[1] == fileName) {
+        if (file[1] == fileName) {
             $("#nameExample").html("Example: " + file[0]);
         }
         var className = (file[1] == fileName ? "class='active'" : "");
