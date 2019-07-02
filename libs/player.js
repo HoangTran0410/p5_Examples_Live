@@ -114,18 +114,24 @@ function createLi(fileName) {
     ul.innerHTML = '';
 
     for (var file of files) {
-        if (file[1] == fileName) {
-            $("#nameExample").html("Example: " + file[0]);
+        if(file[0] == "_______________________________") {
+            ul.innerHTML += `<li role="presentation" class="divider"></li>`;
+            
+        } else {
+            if (file[1] == fileName) {
+                $("#nameExample").html("Example: " + file[0]);
+            }
+            var className = (file[1] == fileName ? "class='active'" : "");
+    
+            ul.innerHTML += `
+            <li role="presentation" ${className}>
+                <a role="menuitem" href="index.html?fileName=${file[1]}">
+                    ${file[0]}
+                </a>
+            </li>
+            `;
         }
-        var className = (file[1] == fileName ? "class='active'" : "");
 
-        ul.innerHTML += `
-        <li role="presentation" ${className}>
-            <a role="menuitem" href="index.html?fileName=${file[1]}">
-                ${file[0]}
-            </a>
-        </li>
-        `;
     }
 }
 
