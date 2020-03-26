@@ -6,7 +6,7 @@ const AwsomeShape = {
     init: function (sketch) {
         let css = 'background: #111; color: #fff; font-size: 21px;';
         let css2 = 'background: #f55c; color: #fff; font-size: 21px;';
-        console.log('%c p5.%c AwsomeShape %c https://github.com/HoangTran0410/p5.AwsomeBox', css, css2, '');
+        console.log('%c p5.%c AwsomeShape %c https://github.com/HoangTran0410/p5.AwsomeShape', css, css2, '');
 
         sketch.registerMethod('post', function () {
             for (let ag in AwsomeGroups) {
